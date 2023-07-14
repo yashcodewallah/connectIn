@@ -3,7 +3,7 @@ import { signInWithPopup } from "firebase/auth";
 import { SET_USER, SET_LOADING_STATUS, GET_ARTICLES } from "./actiontype";
 import db from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { addDoc, collection, doc, getDoc, onSnapshot, setDoc, updateDoc } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, onSnapshot, updateDoc } from "firebase/firestore";
 
 export const setUser = (payload) => {
   return {
@@ -77,6 +77,7 @@ export function postArticleAPI(payload) {
             case 'running':
               console.log('Upload is running');
               break;
+            default:
           }
         },
         (error) => {

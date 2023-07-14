@@ -11,12 +11,11 @@ const Login = (props) => {
   const  handleLogin =async () => {
     props.signIn()
  }
-
+ 
   return (
     <Container>
       <Nav>
-        <a href='/'><img src="/images/login-logo.svg" alt='' /></a>
-        <div>
+        <div style={{'float':'right'}}>
           <Join>Join now</Join>
           <Signin>Sign in</Signin>
         </div>
@@ -53,6 +52,7 @@ flex-wrap:nowrap;
 & > a{
     width:135px;
     height:34px;
+    color:#F5F5F5;
     @media(max-width:768px){
         padding: 0 5px;
     }
